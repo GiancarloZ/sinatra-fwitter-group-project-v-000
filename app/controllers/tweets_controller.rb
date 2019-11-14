@@ -63,10 +63,16 @@ class TweetsController < ApplicationController
       @tweet.user_id = session[:user_id]
       @tweet.content = params[:content]
       @tweet.save
+<<<<<<< HEAD
       redirect to "/tweets"
     else
       redirect to "/tweets/#{@user.id}/edit"
     end
+=======
+    end
+
+    redirect to "/tweets"
+>>>>>>> 7880cffafbc651bb3cf753dda1ce4dc2bfaee0eb
   end
 
   post "/tweets/:id/delete" do
